@@ -59,7 +59,7 @@ export default function NewServiceAds() {
 
 
         try {
-          const response = await axios.post("/serviceprovider/addnewserviceprovider", 
+          const response = await axios.post("https://settlers-hub-server.vercel.app/serviceprovider/addnewserviceprovider", 
           {
             category: category,
             subject: subject,

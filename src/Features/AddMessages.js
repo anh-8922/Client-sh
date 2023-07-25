@@ -36,7 +36,7 @@ export default function AddMessages ({ postId, handleCloseMessage }) {
             console.log("Post text cannot be empty")
             return;
           }
-        const response = await axios.put('/message/addnewrmessage' ,
+        const response = await axios.put('https://settlers-hub-server.vercel.app/message/addnewrmessage' ,
         {textMesaage, postId},{
             withCredentials: true,
             headers: {

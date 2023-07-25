@@ -11,7 +11,7 @@ import Modal from '@mui/material/Modal';
 import AddMessages from "../AddMessages";
 
 export default function Tax () {
-    const {data, refetch} = useFetchData('/servicerequests/listservicerequset')
+    const {data, refetch} = useFetchData('https://settlers-hub-server.vercel.app/servicerequests/listservicerequset')
     console.log("request data:", data)
     const [message, setMessage] = useState(false)
     const [postIdToMessage, setPostIdToMessage] = useState('')

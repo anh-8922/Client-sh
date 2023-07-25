@@ -22,7 +22,7 @@ export default function MyServiceAds() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`/serviceprovider/listserviceadsbyuser?owner=${userId}`, {
+      const response = await axios.get(`https://settlers-hub-server.vercel.app/serviceprovider/listserviceadsbyuser?owner=${userId}`, {
         withCredentials: true
       });
       const responseData = response

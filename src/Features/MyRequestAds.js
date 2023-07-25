@@ -22,7 +22,7 @@ export default function MyRequestsAds() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`/servicerequests/listrequestadsbyuser?owner=${userId}`, {
+      const response = await axios.get(`https://settlers-hub-server.vercel.app/servicerequests/listrequestadsbyuser?owner=${userId}`, {
         withCredentials: true
       });
       const responseData = response
@@ -42,7 +42,7 @@ export default function MyRequestsAds() {
   const handleDeleteProperty = async (id) => {
     console.log("id:", id);
     try {
-      await axios.delete(`servicerequests/delete/${id}`, {
+      await axios.delete(`https://settlers-hub-server.vercel.appservicerequests/delete/${id}`, {
         withCredentials: true
       });
     fetchData()

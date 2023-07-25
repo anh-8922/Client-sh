@@ -38,7 +38,7 @@ export default function EditServiceAd() {
   const navigate = useNavigate()
 
 
-  const {data, error} = useFetchData(`/serviceprovider/listoneserviceprovider/${id}`)
+  const {data, error} = useFetchData(`https://settlers-hub-server.vercel.app/serviceprovider/listoneserviceprovider/${id}`)
   console.log("data to edit:", data)
 
 
@@ -96,7 +96,7 @@ export default function EditServiceAd() {
 
 
         try {
-          const response = await axios.put(`/serviceprovider/edit?id=${id}`, 
+          const response = await axios.put(`https://settlers-hub-server.vercel.app/serviceprovider/edit?id=${id}`, 
           {
             category: category,
             subject: subject,

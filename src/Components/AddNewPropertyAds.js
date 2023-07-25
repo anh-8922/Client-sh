@@ -112,32 +112,6 @@ export default function NewProperty() {
   }, [postCode]);
 
 
-
-  // const fetchCoordinates = async () => {
-  //   console.log("postcode google:", postCode)
-  //   try {
-      
-  //     const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${postCode}&key=${myLocationAPI}`);
-  //     console.log("response:", response)
-  //     const results = response.data.results;
-  //    console.log('respond google:', results)
-  //       const location = results[0].geometry.location;
-  //       setLongitude(location.lng);
-  //       setLatitude(location.lat);
-    
-  //   } catch (error) {
-  //     console.error('Error fetching coordinates:', error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   fetchCoordinates();
-  // }, [postCode]);
-
-
- 
-
-
   useEffect(() => {
  
   }, [userID,

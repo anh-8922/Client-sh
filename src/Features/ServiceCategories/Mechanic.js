@@ -11,7 +11,7 @@ import AddServiceReview from "../AddServiceReview"
 import { useState } from "react"
 
 export default function Mechanics () {
-    const {data, refetch} = useFetchData('/serviceprovider/listserviceproviders')
+    const {data, refetch} = useFetchData('https://settlers-hub-server.vercel.app/serviceprovider/listserviceproviders')
     console.log("request data:", data)
     const [message, setMessage] = useState(false)
     const [review, setReview] = useState(false)
