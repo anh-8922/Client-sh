@@ -5,6 +5,7 @@ import NewsLetter from "../Components/NewsLetter";
 import MainLayout from "../Layout/MainLayout";
 import MediaQuery from 'react-responsive'
 import HomeMb from "../Responsive/HomeMb";
+import TestCookices from "../Components/testcookies";
 
 
 
@@ -18,6 +19,7 @@ export default function HomePage() {
                     <SpotLight/>
                     <LondonGuide/>
                     <NewsLetter/>
+                    <TestCookices/>
                 </MainLayout>   
             </MediaQuery>
             <MediaQuery minWidth={500} maxWidth={1223}>

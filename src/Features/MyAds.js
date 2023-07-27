@@ -17,20 +17,9 @@ export default function MyAds() {
 
   useEffect(() => {
     if (cookies.access_token) {
-      // fetchData();
-      fetchDataCookie()
+      fetchData();
     }
   }, [cookies.access_token ]);
-
-
-  const fetchDataCookie = async ()=>{
-    try{
-      const cookiesresponse = await axios.get('https://settlers-hub-server.vercel.app/test-cookie', { withCredentials: true })
-  
-    console.log('Response cookies:', cookiesresponse);
-  } catch(error ) {
-    console.log('Error:', error.message);
-  } 
 
   const fetchData = async () => {
     try {
@@ -115,5 +104,4 @@ export default function MyAds() {
       </div>
     </div>
   );
-}
 }
