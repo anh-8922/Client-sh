@@ -4,7 +4,6 @@ import profile from "../Assets/profile.png"
 import Spinner from "./Spinner"
 import { useEffect, useState } from "react"
 import EditProfile from "../Components/EditProfile"
-import axios from "axios";
 
 export default function MyProfile () {
     const userID = useGetUserID ()
@@ -13,16 +12,6 @@ export default function MyProfile () {
     console.log("user data profile:", data)
     const [profileUpdate, setProfileUpdate] = useState(false)
     const [saveClick, setSaveClick] = useState(false)
-
-
-    const fetchData = axios.get('https://settlers-hub-server.vercel.app/test-cookie', { withCredentials: true })
-    .then(response => {
-      console.log('Response:', response.data);
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
- 
 
 
     useEffect( () => {
