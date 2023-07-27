@@ -5,9 +5,18 @@ import NewsLetter from "../Components/NewsLetter";
 import MainLayout from "../Layout/MainLayout";
 import MediaQuery from 'react-responsive'
 import HomeMb from "../Responsive/HomeMb";
+import axios from "axios";
 
 
 export default function HomePage() {
+    const fetchData = axios.get('https://settlers-hub-server.vercel.app/test-cookie', { withCredentials: true })
+    .then(response => {
+      console.log('Response:', response.data);
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
+fetchData()  
     return (
         <>
             <MediaQuery minWidth={1224}>
