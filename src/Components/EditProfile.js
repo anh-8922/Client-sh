@@ -18,7 +18,7 @@ export default function EditProfile () {
     const userID = useGetUserID ()
     console.log("Add property post ueseID:", userID)
     const [ cookies, _] = useCookies(["access_token"])
-    console.log("acess:", cookies)
+    console.log("access update pro:", cookies)
     const [gender, setGender] = useState('')
     const [title, setTitle] =useState('')
     const [addressline1, setAddressline1] = useState('')
@@ -122,10 +122,16 @@ export default function EditProfile () {
               "Content-type": "multipart/form-data; charset=UTF-8",
             },
           });
-          
-          setFormSubmitted(true);
           console.log("form data", formData)
           console.log("Response:", response);
+          if(response.data.success === true){
+            setFormSubmitted(true);
+          } else {
+            alert("error")
+          }
+          
+          
+          
           
           // navigate("/user");
         } catch (error) {

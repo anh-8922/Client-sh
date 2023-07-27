@@ -60,7 +60,7 @@ export default function SignIn() {
         setCookies("access_token", response.data.token);
         // console.log(response.data)
         window.localStorage.setItem("userID", response.data.userID);
-        console.log("Login sucessfull:", response.data.username)
+        console.log("Login sucessfull:")
         navigate('/profile');
       // }
 
