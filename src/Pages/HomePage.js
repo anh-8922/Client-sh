@@ -16,7 +16,7 @@ export default function HomePage() {
     .catch(error => {
       console.log('Error:', error);
     });
-fetchData()  
+ 
     return (
         <>
             <MediaQuery minWidth={1224}>
